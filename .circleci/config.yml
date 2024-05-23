@@ -3,4 +3,4 @@ jobs:
   build:
     steps:
       - checkout
-      - run : node example.js
+      - run : node src.js
