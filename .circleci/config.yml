@@ -4,8 +4,8 @@ jobs:
  test:
   steps:
    checkout:
-     -run:
-       -name: Install Nodejs Dependencies
+    -run:
+      -name: Install Nodejs Dependencies
        command: npm install
      -run:
        -name: Run Code
