@@ -5,13 +5,4 @@ jobs:
   steps:
    checkout:
     -run:
-      -name: Install Nodejs Dependencies
-       command: npm install
-     -run:
-       -name: Run Code
-       command: node index.js
- 
-workflows:
- version: 2.1
- jobs:
-   -test
+  
