@@ -2,9 +2,9 @@
   "name": "circleci-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "start": "echo node index.js"
   },
   "keywords": [],
   "author": "",

@@ -1,14 +1,17 @@
-version:2.1
+version: 2.1
 
 jobs:
  build:
-  run:
-   name: install dependencies
-   command: npm init -y
-  run:
-   name: run code
-   command: node src.js
-
+  docker:
+   image: circleci/node:latest
+    steps:
+      checkout:
+       -run: npm install -y
+      checkout:
+       run: node index.js
+       
 workflows:
  jobs:
   build
+
+       
