@@ -2,5 +2,5 @@ version: 2.1
 jobs:
   build:
     steps:
-- checkout
-- run : node example.js
+      - checkout
+      - run : node example.js
