@@ -1,48 +1,8 @@
 version: 2.1
-
 jobs:
   build:
-    docker:
-      - image: circleci/node:14
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run:
-          name: Install Dependencies
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Run Tests
-          command: npm test
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
-
-  deploy:
-    docker:
-      - image: circleci/node:14
-    steps:
-      - attach_workspace:
-          at: /workspace
-      - run:
-          name: Navigate to Workspace
-          command: cd /workspace && ls -la
-      - run:
-          name: Deploy
-          command: echo "Deploy steps go here"
-
-workflows:
-  version: 2
-  build_and_deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
+   docker:
+     image: circleci/node:20.0.0
+steps:
+- checkout
+- run : node src.js
