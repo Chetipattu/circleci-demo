@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   build:
-    steps:
+   docker:
+     image: circleci/node:20.0.0
+      steps:
       - checkout
-      - run : node src.js
+      - run : node example.js
