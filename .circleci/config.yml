@@ -32,6 +32,9 @@ jobs:
       - attach_workspace:
           at: /workspace
       - run:
+          name: Navigate to Workspace
+          command: cd /workspace && ls -la
+      - run:
           name: Deploy
           command: echo "Deploy steps go here"
 
