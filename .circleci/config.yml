@@ -1,8 +1,11 @@
-version: 2.1
- 
 jobs:
  test:
   steps:
    checkout:
-    -run:
-  
+     -run:
+       -name: Install Nodejs Dependencies
+       command: npm install
+     -run:
+       -name: Run Code
+       command: node index.js
+ 
