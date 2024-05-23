@@ -1,17 +1,14 @@
-version: 2.1 
+version:2.1
 
 jobs:
- test:
-  steps:
-   checkout:
-     run:
-       name: Install Nodejs Dependencies
-       command: npm install -y
-     run:
-       name: Run Code
-       command: node index.js
- 
+ build:
+  run:
+   name: install dependencies
+   command: npm init -y
+  run:
+   name: run code
+   command: node src.js
+
 workflows:
- version: 2.1
  jobs:
-   test
+  build
