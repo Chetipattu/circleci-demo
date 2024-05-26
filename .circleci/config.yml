@@ -34,3 +34,4 @@ workflows:
   build_and_install_dependencies:
     jobs:
       - build
+      - deploy
